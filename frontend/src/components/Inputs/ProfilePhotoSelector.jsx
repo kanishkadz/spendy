@@ -25,7 +25,23 @@ const ProfilePhotoSelector = ({iamge, setImage}) => {
     };
 
   return (
-    <div>ProfilePhotoSelector</div>
+    <div className="flex justify-center mb-6">
+        <input type="file" accept="image/*" ref={inputRef} onChange={handleImageChange} className="hidden" />
+
+        {!image ? (
+            <div>
+                <LuUser className="" />
+                <button type="button" className="" onClick={onChooseFile}>
+                    <LuUpload />
+                </button>
+            </div>
+        ) : (
+            <div>
+                <img src={previewUrl} alt="Profile Photo" className="" />
+                <button type="button" className="" onClick={handleRemoveImage}> <LuTrash /> </button>
+            </div>
+        )}
+    </div>
   )
 }
 
