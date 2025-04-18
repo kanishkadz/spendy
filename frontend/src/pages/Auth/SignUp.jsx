@@ -32,7 +32,9 @@ const SignUp = () => {
 
             <Input value={email} onChange = {({ target }) => setEmail(target.value)} label="Email Address" placeholder="Enter your email" type="text" />
 
-          <Input value={password} onChange = {({ target }) => setPassword(target.value)} label="Password" placeholder="Minimun 8 characters" type="password" />
+            <div className="col-span-2">
+              <Input value={password} onChange = {({ target }) => setPassword(target.value)} label="Password" placeholder="Minimun 8 characters" type="password" />
+            </div>
           </div>
         </form>
       </div>
