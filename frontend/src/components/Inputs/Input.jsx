@@ -8,7 +8,13 @@ const Input = ({value, onChange, placeholder, label, type}) => {
   };
 
   return (
-    <div>Input</div>
+    <div>
+        <label className="">{label}</label>
+
+        <div className="">
+            <input type={type == 'password' ? showPassword ? 'text' : 'password' : type} placeholder={placeholder} className="" value={value} onChange = {(e) => onChange(e)} />
+        </div>
+    </div>
   )
 }
 
