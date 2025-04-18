@@ -24,9 +24,9 @@ const Login = () => {
 
           {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
 
-          <button type="submit" className="btn-primary">LogIn</button>
+          <button type="submit" className="btn-primary">LOGIN</button>
 
-          <p className="text-[13px] text-slate-800 mt-3">Don't have an accpunt? {" "} <Link className="font-medium text-primary underline" to="/signup">SignUp</Link></p>
+          <p className="text-[13px] text-slate-800 mt-3">Don't have an account? {" "} <Link className="font-medium text-primary underline" to="/signup">SignUp</Link></p>
         </form>
       </div>
     </AuthLayout>
