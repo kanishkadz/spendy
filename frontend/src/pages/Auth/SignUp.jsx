@@ -25,7 +25,12 @@ const SignUp = () => {
         <p className="text-xs text-slate-700 mt-[5px] mb-6">
           Join us today by entering your details below.
         </p>
-        
+
+        <form onSubmit={handleSignUp}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Input value={fullName} onChange={({target}) => setFullName(target.value)} label="Full Name" placeholder="Enter your name" type="text"/>
+          </div>
+        </form>
       </div>
     </AuthLayout>
   )
