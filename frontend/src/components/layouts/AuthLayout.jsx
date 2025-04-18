@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from "../../assets/images/Banner.png"
 
 const AuthLayout = ({ children }) => {
     return (
@@ -8,12 +9,12 @@ const AuthLayout = ({ children }) => {
                 {children}
             </div>
 
-            <div>
+            <div className="hidden md:block w-[40vw] h-screen bg-violet-50 bg-auth-bg-img bg-cover bg-no-repeat bg-center overflow-hidden p-8 relative">
                 <div className="" />
                 <div className="" />
                 <div className="" />
 
-                <img src="" alt="" />
+                <img src={Banner} alt="" />
             </div>
         </div>
     )
