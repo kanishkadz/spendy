@@ -19,7 +19,7 @@ const Login = () => {
 
         <form onSubmit={handleLogin}>
           <Input value={email} onChange = {({ target }) => setEmail(target.value)} label="Email Address" placeholder="Enter your email" type="text" />
-          <Input value={password} onChange = {({ target }) => setPassword(target.value)} label="Password" placeholder="Enter your password" type="password" />
+          <Input value={password} onChange = {({ target }) => setPassword(target.value)} label="Password" placeholder="Minimun 8 characters" type="password" />
         </form>
       </div>
     </AuthLayout>
