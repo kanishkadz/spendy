@@ -11,7 +11,7 @@ const AuthLayout = ({ children }) => {
 
             <div className="hidden md:block w-[40vw] h-screen bg-violet-50 bg-auth-bg-img bg-cover bg-no-repeat bg-center overflow-hidden p-8 relative">
                 <div className="w-48 h-48 rounded-[40px] bg-purple-600 absolute -top-7 -left-5" />
-                <div className="" />
+                <div className="w-48 h-56 rounded-[40px] border-[20px] border-fuchsia-600 absolute top-[30%] -right-10" />
                 <div className="" />
 
                 <img src={Banner} alt="" />
