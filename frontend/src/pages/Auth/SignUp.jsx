@@ -45,7 +45,7 @@ const SignUp = () => {
 
           <button type="submit" className="btn-primary">SIGN UP</button>
 
-          <p className="text-[13px] text-slate-800 mt-3">Don't have an account? {" "} <Link className="font-medium text-primary underline" to="/signup">SignUp</Link></p>
+          <p className="text-[13px] text-slate-800 mt-3">Already an user? {" "} <Link className="font-medium text-primary underline" to="/login">LogIn</Link></p>
         </form>
       </div>
     </AuthLayout>
