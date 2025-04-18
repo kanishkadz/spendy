@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Input = () => {
+const Input = ({value, onChange, placeholder, label, type}) => {
+  const [showPassword, setShowPassword] = useState(false);
+  
+  const toggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
   return (
     <div>Input</div>
   )
