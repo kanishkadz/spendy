@@ -28,18 +28,24 @@ const SignUp = () => {
         </p>
 
         <form onSubmit={handleSignUp}>
-          
+
           <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Input value={fullName} onChange={({target}) => setFullName(target.value)} label="Full Name" placeholder="Enter your name" type="text"/>
+            <Input value={fullName} onChange={({ target }) => setFullName(target.value)} label="Full Name" placeholder="Enter your name" type="text" />
 
-            <Input value={email} onChange = {({ target }) => setEmail(target.value)} label="Email Address" placeholder="Enter your email" type="text" />
+            <Input value={email} onChange={({ target }) => setEmail(target.value)} label="Email Address" placeholder="Enter your email" type="text" />
 
             <div className="col-span-2">
-              <Input value={password} onChange = {({ target }) => setPassword(target.value)} label="Password" placeholder="Minimun 8 characters" type="password" />
+              <Input value={password} onChange={({ target }) => setPassword(target.value)} label="Password" placeholder="Minimun 8 characters" type="password" />
             </div>
           </div>
+
+          {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
+
+          <button type="submit" className="btn-primary">SIGN UP</button>
+
+          <p className="text-[13px] text-slate-800 mt-3">Don't have an account? {" "} <Link className="font-medium text-primary underline" to="/signup">SignUp</Link></p>
         </form>
       </div>
     </AuthLayout>
