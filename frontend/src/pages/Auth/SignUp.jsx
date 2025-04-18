@@ -29,6 +29,10 @@ const SignUp = () => {
         <form onSubmit={handleSignUp}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Input value={fullName} onChange={({target}) => setFullName(target.value)} label="Full Name" placeholder="Enter your name" type="text"/>
+
+            <Input value={email} onChange = {({ target }) => setEmail(target.value)} label="Email Address" placeholder="Enter your email" type="text" />
+
+          <Input value={password} onChange = {({ target }) => setPassword(target.value)} label="Password" placeholder="Minimun 8 characters" type="password" />
           </div>
         </form>
       </div>
