@@ -20,7 +20,12 @@ const SignUp = () => {
 
   return (
     <AuthLayout>
-      
+      <div className="">
+        <h3 className="">Create an Account</h3>
+        <p className="">
+          Join us today by entering your details below.
+        </p>
+      </div>
     </AuthLayout>
   )
 }
