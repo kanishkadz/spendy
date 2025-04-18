@@ -10,8 +10,18 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [error, setError] = useState(null);
+
+  const navigate = useNavigate();
+
+  const handleSignUp = async (e) => {
+
+  }
+
   return (
-    <div>SignUp</div>
+    <AuthLayout>
+      
+    </AuthLayout>
   )
 }
 
