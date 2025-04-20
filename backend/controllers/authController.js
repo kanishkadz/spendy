@@ -9,7 +9,7 @@ const generateToken = (id) => {
 exports.registerUser = async (req, res) => {};
 
 //login user
-exports.registerUser = async (req, res) => {};
+exports.loginUser = async (req, res) => {};
 
 //register user
-exports.registerUser = async (req, res) => {};
+exports.getUserInfo = async (req, res) => {};
