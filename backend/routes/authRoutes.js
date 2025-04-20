@@ -2,6 +2,7 @@ const express = require("express");
 const {protect} = require("../middlewares/authMiddleware");
 
 const { registerUser, loginUser, getUserInfo } = require("../controllers/authController");
+const upload = require("../middlewares/uploadMiddleare");
 
 const router = express.Router();
 
