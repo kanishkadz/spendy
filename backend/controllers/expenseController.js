@@ -6,14 +6,16 @@ exports.addExpense = async (req, res) => {
     const userId = req.user.id;
 
     try {
-        if (!source || !amount || !date) {
+        const {icon, category, amount, date} = req.body;
+
+        if (!category || !amount || !date) {
             return res.status(400).json({message: "All fields are required"});
         }
 
         const newExpense = new Expense({
             userId,
             icon, 
-            source,
+            category,
             amount,
             date: new Date(date)
         });
@@ -30,8 +32,8 @@ exports.getAllExpense = async (req, res) => {
     const userId = req.user.id;
 
     try {
-        const Expense = await Expense.find({userId}).sort({date: -1});
-        res.json(Expense);
+        const expense = await Expense.find({userId}).sort({date: -1});
+        res.json(expense);
     } catch (err) {
         res.status(500).json({message: "Server Error"});
     }
@@ -42,7 +44,7 @@ exports.deleteExpense = async (req, res) => {
     const userId = req.user.id;
     
     try {
-        await Expense.findByIdAndDelete(req.params.id);
+        await expense.findByIdAndDelete(req.params.id);
         res.json({message: "Expense deleted successfully"});
     } catch (err) {
         res.status(500).json({message: "Server Error"});
