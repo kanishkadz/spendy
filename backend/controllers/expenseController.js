@@ -44,7 +44,7 @@ exports.deleteExpense = async (req, res) => {
     const userId = req.user.id;
     
     try {
-        await expense.findByIdAndDelete(req.params.id);
+        await Expense.findByIdAndDelete(req.params.id);
         res.json({message: "Expense deleted successfully"});
     } catch (err) {
         res.status(500).json({message: "Server Error"});
@@ -56,10 +56,10 @@ exports.downloadExpenseExcel = async (req, res) => {
     const userId = req.user.id;
 
     try {
-        const Expense = await Expense.find({userId}).sort({date: -1});
+        const expense = await Expense.find({userId}).sort({date: -1});
 
         //prepare data for excel
-        const data = Expense.map((item) => ({
+        const data = expense.map((item) => ({
             Source: item.source,
             Amount: item.amount,
             Date: item.date,
@@ -67,9 +67,9 @@ exports.downloadExpenseExcel = async (req, res) => {
 
         const wb = xlsx.utils.book_new();
         const ws = xlsx.utils.json_to_sheet();
-        xlsx.utils.book_append_sheet(wb, ws, "Expense");
-        xlsx.writeFile(wb, 'Expense_details.xlsx');
-        res.download('Expense_details.xlsx');
+        xlsx.utils.book_append_sheet(wb, ws, "expense");
+        xlsx.writeFile(wb, 'expense_details.xlsx');
+        res.download('expense_details.xlsx');
     } catch (err) {
         res.status(500).json({message: "Server Error"});
     }
