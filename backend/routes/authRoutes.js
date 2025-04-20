@@ -9,6 +9,6 @@ router.post("/register", registerUser);
 
 router.post("/login", loginUser);
 
-// router.get("/getUser", GiProtectionGlasses, getUserInfo);
+router.get("/getUser", GiProtectionGlasses, getUserInfo);
 
 module.exports = router;
