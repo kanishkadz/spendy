@@ -43,6 +43,10 @@ const SignUp = () => {
     setError("");
 
     try{
+      if (profilePic) {
+        const imgUploadRes = await uploadImage(profilePic);
+        profileImageUrl = imgUploadRes.imageUrl || "";
+      }
       const response = await axiosInstance.post(API_PATHS.AUTH.REGISTER, {
         fullName, email, password,
       });
